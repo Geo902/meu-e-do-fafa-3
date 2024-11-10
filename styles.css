@@ -1,0 +1,205 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo com partículas flutuantes */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('fundo-coracoes.png') repeat;
+    opacity: 0.15;
+    z-index: -1;
+    animation: floatParticles 20s linear infinite;
+}
+
+@keyframes floatParticles {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Estilo geral do body */
+body {
+    font-family: 'Courier New', monospace;
+    background: #f1e6fa;
+    color: #4f4f4f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Centralizar o conteúdo da página em um container flexível */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Tela de Cadastro e Login */
+.auth-box, .mensagem-bemvindo {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilização específica para inputs e botões de cadastro/login */
+.auth-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Botão com animação pulsante */
+.auth-box button {
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: transform 0.2s;
+    animation: pulsar 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.auth-box button:hover {
+    background-color: #ff4b9b;
+}
+
+/* Título e Cabeçalho */
+header {
+    background-color: #ff6f91;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Estilo para o menu de navegação em linha */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo das abas */
+.tab-button {
+    background-color: #f9f9f9;
+    border: 2px solid #ff66b2;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.tab-button:hover {
+    background-color: #ff66b2;
+    color: white;
+}
+
+.tab-button.active {
+    background-color: #ff66b2;
+    color: white;
+}
+
+/* Conteúdo das abas */
+.tab-content {
+    display: none;
+    padding: 30px;
+    text-align: center;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+h2 {
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+/* Animação de aumento e rotação para as imagens da galeria */
+.galeria-imagens img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+.galeria-imagens img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de entrada suave para os textos */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #f4f4f4;
+    color: #4f4f4f;
+    width: 100%;
+}
+
+

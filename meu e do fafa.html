@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Cantinho Especial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela de Cadastro -->
+    <div id="cadastro" class="auth-box" style="display: none;">
+        <h2>Cadastro</h2>
+        <form id="form-cadastro">
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <input type="email" id="email" placeholder="Digite seu email" required>
+            <input type="password" id="senha" placeholder="Crie uma senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <!-- Tela de Login -->
+    <div id="login" class="auth-box" style="display: none;">
+        <h2>Login</h2>
+        <form id="form-login">
+            <input type="text" id="login-username" placeholder="Nome de usuário" required>
+            <input type="password" id="login-password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <!-- Mensagem de Boas-Vindas -->
+    <div id="mensagem-bemvindo" class="mensagem-bemvindo fade-in" style="display: none;">
+        <p>Bem-vindo, <span id="nome-usuario"></span>! Estou muito feliz em te ver por aqui, meu amoooooor!</p>
+    </div>
+
+    <!-- Título e Menu de Navegação -->
+    <header id="header" class="fade-in" style="display: none;">
+        <h1>Nosso Cantinho Especial</h1>
+        <nav>
+            <ul>
+                <li><button class="tab-button" data-tab="home">Home</button></li>
+                <li><button class="tab-button" data-tab="nossa-historia">Nossa História</button></li>
+                <li><button class="tab-button" data-tab="galeria">Galeria</button></li>
+                <li><button class="tab-button" data-tab="mensagem">Mensagem</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo das Abas -->
+    <main class="fade-in">
+        <section id="home" class="tab-content">
+            <h2>Bem-vindo ao nosso cantinho!</h2>
+            <p>Este site foi criado para celebrar o amor e os momentos especiais que compartilhamos.</p>
+        </section>
+        <section id="nossa-historia" class="tab-content">
+            <h2>Nossa História</h2>
+            <p>Tudo começou quando comecei a sentar atrás no garoto do meu colégio, fomos nos "engraçando" e quando vi... estávamos namorando. 
+            Bom, decidi criar este site para registrar cada momento ao seu lado. Esta página é dedicada a todas as nossas aventuras, risadas, conquistas e, claro, todo o amor que nos une.</p>
+        </section>
+        <section id="galeria" class="tab-content">
+            <h2>Galeria de Momentos</h2>
+            <p>Algumas das nossas fotos favoritas:</p>
+            <div class="galeria-imagens">
+                <img src="love.png" alt="Um momento especial juntos">
+            </div>
+        </section>
+        <section id="mensagem" class="tab-content">
+            <h2>Mensagem Especial</h2>
+            <p>Para o amor da minha vida: cada momento ao seu lado é um presente. Te amo demais, Fafaaaaa!</p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Nosso Cantinho Especial. Feito com amor.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
